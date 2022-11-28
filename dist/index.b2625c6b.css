@@ -1,0 +1,303 @@
+* {
+  box-sizing: inherit;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #ee38e2bf, #17a8c5c5);
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  font-family: Trebuchet MS, sans-serif;
+  display: flex;
+  position: relative;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.bg {
+  height: 100vh;
+  width: 100vw;
+  z-index: -10;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+}
+
+.bg-shape1 {
+  clip-path: polygon(0 46%, 29% 70%, 29% 100%, 0 100%);
+  background: linear-gradient(to bottom right, #e75cdd, #17a8c5c5);
+  left: 0;
+}
+
+.bg-shape2 {
+  clip-path: polygon(100% 36%, 29% 70%, 29% 100%, 100% 100%);
+  background: linear-gradient(to bottom right, #ee38e2bf, #17a7c5);
+  right: 0;
+}
+
+.main-container {
+  width: 95%;
+  height: 95%;
+  background: #12121bf2;
+  border-radius: 15px;
+  flex-direction: column;
+  padding: 2.5rem;
+  display: flex;
+  box-shadow: 0 1rem 2rem #000000b3;
+}
+
+.header {
+  width: 100%;
+  color: #fffe;
+  justify-content: space-between;
+  gap: 30rem;
+  padding: 2rem;
+  display: flex;
+}
+
+.header-left {
+  flex: 0 0 30%;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+.header-left h1 {
+  font-size: 6.2rem;
+}
+
+.header-left h4 {
+  cursor: pointer;
+  color: #838383c0;
+  font-size: 1.2rem;
+}
+
+.header-left h4 i {
+  color: #fffe;
+  font-size: 1.4rem;
+}
+
+.header-left h4 span {
+  font-size: 1.6rem;
+}
+
+.header-right {
+  flex: 0 0 30%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  display: flex;
+}
+
+.header-right .img {
+  height: 50px;
+  width: 50px;
+  background-image: url("sergio.172bb98a.jpg");
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.header-fa {
+  font-size: 3.2rem;
+}
+
+.header .fa-expand {
+  cursor: pointer;
+}
+
+.header .fa-expand:hover {
+  transform: scale(1.05)rotate(180deg);
+}
+
+.header .fa-gear {
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.header .fa-gear:hover {
+  transform: rotate(560deg)scale(1.2);
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.container .sidebar {
+  color: #ffffffa5;
+  flex-direction: column;
+  flex: 0 0 15%;
+  padding: 2rem 0;
+  display: flex;
+  overflow: scroll;
+}
+
+.container .sidebar h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 6.4rem;
+}
+
+.container .sidebar .menu-tab {
+  transition: all .3s;
+  overflow: hidden;
+}
+
+.container .sidebar .menu-tab.closed {
+  height: 65px !important;
+}
+
+.container .sidebar .menu-tab h3 {
+  color: #fffe;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  font-size: 2.2rem;
+  display: flex;
+}
+
+.container .sidebar .menu-tab h3:hover {
+  color: #fff;
+}
+
+.container .sidebar .menu-tab ul {
+  font-size: 1.6rem;
+}
+
+.container .sidebar .menu-tab ul li {
+  height: 100%;
+  width: 80%;
+  border-radius: 0 50px 50px 0;
+  padding: 1rem 0 1rem 3rem;
+}
+
+.container .sidebar .menu-tab ul li:hover {
+  color: #ffffffce;
+  cursor: pointer;
+  background-color: #3a3a564d;
+}
+
+.fa-solid {
+  opacity: .5;
+  color: #ffffffa5;
+  transition: all .3s;
+  transform: scale(.8);
+}
+
+.main {
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+}
+
+.main-header {
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3rem;
+  padding: 0 2rem;
+  display: grid;
+}
+
+.main .window {
+  height: 12.5rem;
+  color: #fffe;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 3rem;
+  transition: all .2s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.main .window:hover {
+  transform: scale(1.05);
+}
+
+.main .window-blue {
+  background: linear-gradient(to right, #1f56ab, #3e8edf);
+  box-shadow: 1rem 1rem 2rem #1f56ab33;
+}
+
+.main .window-purple {
+  background: linear-gradient(to right, #581fab, #cd3edf);
+  box-shadow: 1rem 1rem 2rem #581fab33;
+}
+
+.main .window-orange {
+  background: linear-gradient(to right, #de6f2a, #e19426);
+  box-shadow: 1rem 1rem 2rem #de6f2a33;
+}
+
+.main .window-red {
+  background: linear-gradient(to right, #b32b2b, #d56262);
+  box-shadow: 1rem 1rem 2rem #b32b2b33;
+}
+
+.main .window .bg-icon {
+  opacity: .08;
+  font-size: 40rem;
+  position: absolute;
+  top: -15rem;
+  left: -10rem;
+  transform: rotate(-45deg);
+}
+
+.main .window .descriptor-text i {
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.main p {
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.main span {
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+.main-analytics {
+  border-radius: 10px;
+  flex: 1;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  padding: 2rem;
+  display: grid;
+}
+
+.chart {
+  border-radius: 15px;
+}
+
+.bar-chart {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.line-chart {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.doughnut-chart {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+/*# sourceMappingURL=index.b2625c6b.css.map */

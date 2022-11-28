@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/13c212ca46.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="bg bg-shape1">&nbsp;</div>
+    <div class="bg bg-shape2">&nbsp;</div>
+    <div class="main-container">
+      <header class="header">
+        <div class="header-left">
+          <h1>Logo</h1>
+          <h4>
+            <span>Dashboard</span>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Primary Dashboard</span>
+          </h4>
+        </div>
+        <div class="header-right">
+          <i class="header-fa fa-solid fa-expand fa"></i>
+          <i class="header-fa fa-solid fa-gear"></i>
+          <div class="img">&nbsp;</div>
+        </div>
+      </header>
+      <div class="container">
+        <aside class="sidebar">
+          <div class="menu-tab menu-tab-dashboard">
+            <h3 class="menu-tab-header">
+              Dashboard <i class="fa fa-solid fa-chevron-down"></i>
+            </h3>
+            <ul class="dashboard-list">
+              <li>Perimary Dashboard</li>
+              <li>Avg. LWOS for Queue</li>
+              <li>LWOS for Queue</li>
+              <li>LWOS River Flow</li>
+              <li>Weekly Trends</li>
+            </ul>
+          </div>
+          <div class="menu-tab menu-tab-reports">
+            <h3 class="menu-tab-header">
+              Reports <i class="fa fa-solid fa-chevron-down"></i>
+            </h3>
+            <ul class="report-list">
+              <li>Weekly LWOS Trends</li>
+              <li>Demographic Report</li>
+              <li>Daily Report</li>
+            </ul>
+          </div>
+          <div class="menu-tab menu-tab-schedule">
+            <h3 class="menu-tab-header">
+              Schedule <i class="fa fa-solid fa-chevron-down"></i>
+            </h3>
+            <ul class="schedule-list">
+              <li>Email Scheduler</li>
+              <li>SMS Alerts</li>
+            </ul>
+          </div>
+          <div class="menu-tab menu-tab-maintenance">
+            <h3 class="menu-tab-header">
+              Maintenance <i class="fa fa-solid fa-chevron-down"></i>
+            </h3>
+            <ul class="maintenance-list">
+              <li>Under construction</li>
+            </ul>
+          </div>
+        </aside>
+        <main class="main">
+          <div class="main-header">
+            <div class="window window-blue">
+              <i class="bg-icon fa-sharp fa-solid fa-shapes"></i>
+              <p class="descriptor-text">
+                Total Customers <i class="fa-solid fa-layer-group"></i>
+              </p>
+              <span>105</span>
+            </div>
+            <div class="window window-purple">
+              <i class="bg-icon fa-sharp fa-solid fa-shapes"></i>
+              <p class="descriptor-text">
+                Avg. Queue Time <i class="fa-solid fa-layer-group"></i>
+              </p>
+              <span>08:32</span>
+            </div>
+            <div class="window window-orange">
+              <i class="bg-icon fa-sharp fa-solid fa-shapes"></i>
+              <p class="descriptor-text">
+                Avg. Service Time <i class="fa-solid fa-layer-group"></i>
+              </p>
+              <span>05:20</span>
+            </div>
+            <div class="window window-red">
+              <i class="bg-icon fa-sharp fa-solid fa-shapes"></i>
+              <p class="descriptor-text">
+                LWOS for Queue<i class="fa-solid fa-layer-group"></i>
+              </p>
+              <span>19</span>
+            </div>
+          </div>
+          <div class="main-analytics">
+            <div class="chart stakedbar-chart">
+              <div class="chart-container">
+                <canvas id="myChart2"></canvas>
+              </div>
+            </div>
+            <div class="chart line-chart">
+              <div class="chart-container">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <div class="chart doughnut-chart">
+              <canvas id="doughnut"></canvas>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script type="module" src="script.js"></script>
+    <script
+      type="module"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.js"
+    ></script>
+  </body>
+</html>
